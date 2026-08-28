@@ -1,0 +1,49 @@
+<section id="progressSection" class="hidden border border-black p-4 mb-6 bg-white">
+  <div class="flex justify-between items-center mb-2">
+    <span class="text-xs font-bold uppercase tracking-wider text-black">Campaign Progress</span>
+    <span id="progressText" class="text-xs font-mono font-bold text-black">Processing...</span>
+  </div>
+  <div class="w-full bg-gray-100 border border-black h-3 overflow-hidden">
+    <div id="progressBar" class="bg-black h-full w-0 transition-all duration-300"></div>
+  </div>
+</section>
+
+<section class="border border-black p-4 mb-6 bg-white flex flex-col h-48">
+  <div class="flex justify-between items-center mb-2 border-b border-black pb-1">
+    <span class="text-xs font-bold uppercase tracking-wider text-black">System Logs</span>
+    <button 
+      id="clearLogsBtn" 
+      class="text-[10px] font-bold uppercase tracking-wider border border-black px-2 py-0.5 hover:bg-black hover:text-white transition-colors"
+    >
+      Clear Terminal
+    </button>
+  </div>
+  <div id="logsContainer" class="font-mono text-xs text-black overflow-y-auto space-y-1 flex-1 pr-2">
+    <p class="text-gray-500">// Ready. Select a file to parse leads.</p>
+  </div>
+</section>
+
+<section class="border border-black p-5 bg-white">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xs font-bold uppercase tracking-wider text-black">Parsed Leads Preview</h2>
+    <span id="leadCount" class="text-xs font-mono border border-black px-2 py-0.5 font-bold">0 Loaded</span>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left text-xs border-collapse border border-black">
+      <thead>
+        <tr class="bg-black text-white uppercase font-bold tracking-wider">
+          <th class="py-2 px-3 border border-black">#</th>
+          <th class="py-2 px-3 border border-black">Name</th>
+          <th class="py-2 px-3 border border-black">Email</th>
+          <th class="py-2 px-3 border border-black">City</th>
+          <th class="py-2 px-3 border border-black">Status</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody" class="divide-y divide-black text-black">
+        <tr>
+          <td colspan="5" class="py-6 text-center text-gray-500 italic">No leads loaded. Select a CSV/TXT file above.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

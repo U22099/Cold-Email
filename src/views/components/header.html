@@ -1,0 +1,25 @@
+<header class="border-b border-black pb-4 mb-6">
+  <h1 class="text-2xl font-bold tracking-tight text-black">OUTREACH DISPATCHER</h1>
+  <p class="text-xs text-gray-600 mt-1 uppercase tracking-widest">Batch Email Campaign System</p>
+</header>
+
+<section class="border border-black p-5 bg-white mb-6">
+  <label for="fileInput" class="block text-xs font-bold uppercase tracking-wider text-black mb-2">
+    Select Leads File (.csv, .txt)
+  </label>
+  <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+    <input 
+      type="file" 
+      id="fileInput" 
+      accept=".csv, .txt" 
+      class="block w-full text-xs text-black border border-black p-2 bg-white cursor-pointer file:mr-4 file:py-1 file:px-3 file:border file:border-black file:bg-black file:text-white file:font-semibold hover:file:bg-gray-800"
+    >
+    <button 
+      id="sendBtn" 
+      disabled 
+      class="w-full sm:w-auto px-6 py-2.5 bg-black hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-wider border border-black transition-colors"
+    >
+      Dispatch Batch
+    </button>
+  </div>
+</section>
