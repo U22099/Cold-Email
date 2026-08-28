@@ -2,7 +2,11 @@ const getPitchTemplate = (lead) => {
   const safeName = lead.name || "Team";
   const safeCompany = lead.company || lead.name || "your business";
   const safeCity = lead.city || "your area";
-  const safeLink = "https://arc-n-beam.vercel.app";
+  const safeLinks = [
+    "https://arc-n-beam.vercel.app",
+    "https://worldplate-five.vercel.app",
+    "https://shortlet-engine.vercel.app",
+  ];
 
   return `
     <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #111; max-width: 600px;">
@@ -25,11 +29,18 @@ const getPitchTemplate = (lead) => {
       </ul>
       
       <p>
-        Here is the live demo preview: <a href="${safeLink}" style="color: #0066cc; font-weight: bold;">${safeLink}</a>
+        Here are few live demo preview: 
+        <li>
+          ${safeLinks.map((link) => (
+           `<a href=${link} style="color: #0066cc; font-weight: bold;" target="_blank" rel="noopener noreferrer">
+              ${link}
+            </a>`
+          ))}
+        </li>
       </p>
       
       <p>
-        If you're open to it, I'd love to quickly show you what I built (no pressure at all). Would you be open to a 5-minute call sometime this week?
+        If you're open to it, I'd love to quickly show you what I built (no pressure at all). Would you be open to see a similar website with your brand?
       </p>
       
       <p>
